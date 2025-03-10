@@ -1,0 +1,8 @@
+<map id="ASingletonGUARD.h" name="ASingletonGUARD.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="31,5,177,31"/>
+<area shape="rect" id="Node000002" href="$ScopeMutex_8h.html" title=" " alt="" coords="5,79,112,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,32,76,69,71,66,94,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="66,152,142,177"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="112,30,127,78,126,111,117,140,112,139,120,110,121,79,107,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="68,103,92,139,87,142,64,106"/>
+</map>

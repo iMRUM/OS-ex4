@@ -1,0 +1,293 @@
+        -:    0:Source:isEulerian.cpp
+        -:    0:Graph:q4.4-isEulerian.gcno
+        -:    0:Data:q4.4-isEulerian.gcda
+        -:    0:Runs:3
+        -:    1:// A C++ program to check if a given directed graph is Eulerian and generate random graphs
+        -:    2:#include <iostream>
+        -:    3:#include <list>
+        -:    4:#include <cstdlib>  // For random number generation
+        -:    5:#include <ctime>    // For seeding random number generator
+        -:    6:#include <getopt.h> // For command-line argument processing
+        -:    7:#include <unistd.h> // For getopt function
+        -:    8:
+        -:    9:using namespace std;
+        -:   10:
+        -:   11:// A class that represents a directed graph
+        -:   12:class Graph
+        -:   13:{
+        -:   14:    int V;           // No. of vertices
+        -:   15:    list<int> *adj;  // A dynamic array of adjacency lists
+        -:   16:    int *in;         // Array to store in-degree of vertices
+        -:   17:public:
+        -:   18:    // Constructor and destructor
+        -:   19:    Graph(int V);
+       42:   20:    ~Graph() { delete [] adj; delete [] in; }
+        -:   21:
+        -:   22:    // Function to add an edge to graph
+       33:   23:    void addEdge(int v, int w) { adj[v].push_back(w); (in[w])++; }
+        -:   24:
+        -:   25:    // Method to check if this graph is Eulerian or not
+        -:   26:    bool isEulerianCycle();
+        -:   27:
+        -:   28:    // Method to check if all non-zero degree vertices are connected
+        -:   29:    bool isSC();
+        -:   30:
+        -:   31:    // Function to do DFS starting from v. Used in isConnected()
+        -:   32:    void DFSUtil(int v, bool visited[]);
+        -:   33:
+        -:   34:    // Function to get the transpose of the graph
+        -:   35:    Graph getTranspose();
+        -:   36:
+        -:   37:    // Function to print the graph
+        -:   38:    void printGraph();
+        -:   39:
+        -:   40:    // Static method to generate a random graph
+        -:   41:    static Graph generateRandomGraph(int numVertices, int numEdges, unsigned int seed);
+        -:   42:};
+        -:   43:
+        6:   44:Graph::Graph(int V)
+        -:   45:{
+        6:   46:    this->V = V;
+      42*:   47:    adj = new list<int>[V];
+       6*:   48:    in = new int[V];
+       42:   49:    for (int i = 0; i < V; i++)
+       36:   50:        in[i] = 0;
+        6:   51:}
+        -:   52:
+        -:   53:/* This function returns true if the directed graph has a eulerian
+        -:   54:   cycle, otherwise returns false */
+        3:   55:bool Graph::isEulerianCycle()
+        -:   56:{
+        -:   57:    // Check if all non-zero degree vertices are connected
+        3:   58:    if (isSC() == false)
+        1:   59:        return false;
+        -:   60:
+        -:   61:    // Check if in-degree and out-degree of every vertex is same
+        3:   62:    for (int i = 0; i < V; i++)
+        3:   63:        if (adj[i].size() != in[i])
+        2:   64:            return false;
+        -:   65:
+    #####:   66:    return true;
+        -:   67:}
+        -:   68:
+        -:   69:// A recursive function to do DFS starting from v
+       33:   70:void Graph::DFSUtil(int v, bool visited[])
+        -:   71:{
+        -:   72:    // Mark the current node as visited
+       33:   73:    visited[v] = true;
+        -:   74:
+        -:   75:    // Recur for all the vertices adjacent to this vertex
+       33:   76:    list<int>::iterator i;
+       93:   77:    for (i = adj[v].begin(); i != adj[v].end(); ++i)
+       60:   78:        if (!visited[*i])
+       27:   79:            DFSUtil(*i, visited);
+       33:   80:}
+        -:   81:
+        -:   82:// Function that returns reverse (or transpose) of this graph
+        3:   83:Graph Graph::getTranspose()
+        -:   84:{
+        3:   85:    Graph g(V);
+       21:   86:    for (int v = 0; v < V; v++)
+        -:   87:    {
+        -:   88:        // Recur for all the vertices adjacent to this vertex
+       18:   89:        list<int>::iterator i;
+       51:   90:        for(i = adj[v].begin(); i != adj[v].end(); ++i)
+        -:   91:        {
+       33:   92:            g.adj[*i].push_back(v);
+       33:   93:            (g.in[v])++;
+        -:   94:        }
+        -:   95:    }
+        3:   96:    return g;
+    =====:   97:}
+        -:   98:
+        -:   99:// This function returns true if all non-zero degree vertices of
+        -:  100:// graph are strongly connected
+        3:  101:bool Graph::isSC()
+        -:  102:{
+        -:  103:    // Mark all the vertices as not visited (For first DFS)
+        3:  104:    bool visited[V];
+       21:  105:    for (int i = 0; i < V; i++)
+       18:  106:        visited[i] = false;
+        -:  107:
+        -:  108:    // Find the first vertex with non-zero degree
+        -:  109:    int n;
+        4:  110:    for (n = 0; n < V; n++)
+        4:  111:        if (adj[n].size() > 0)
+        3:  112:            break;
+        -:  113:
+        -:  114:    // If there are no edges, return true trivially
+        3:  115:    if (n == V)
+    #####:  116:        return true;
+        -:  117:
+        -:  118:    // Do DFS traversal starting from first non-zero degree vertex
+        3:  119:    DFSUtil(n, visited);
+        -:  120:
+        -:  121:    // If DFS traversal doesn't visit all vertices with non-zero degree, then return false
+       21:  122:    for (int i = 0; i < V; i++)
+      18*:  123:        if (adj[i].size() > 0 && visited[i] == false)
+    #####:  124:            return false;
+        -:  125:
+        -:  126:    // Create a reversed graph
+        3:  127:    Graph gr = getTranspose();
+        -:  128:
+        -:  129:    // Mark all the vertices as not visited (For second DFS)
+       21:  130:    for (int i = 0; i < V; i++)
+       18:  131:        visited[i] = false;
+        -:  132:
+        -:  133:    // Do DFS for reversed graph starting from the same vertex
+        3:  134:    gr.DFSUtil(n, visited);
+        -:  135:
+        -:  136:    // If all vertices are not visited in second DFS, then return false
+       18:  137:    for (int i = 0; i < V; i++)
+       16:  138:        if (adj[i].size() > 0 && visited[i] == false)
+        1:  139:            return false;
+        -:  140:
+        2:  141:    return true;
+        6:  142:}
+        -:  143:
+        -:  144:// Function to print the graph
+        3:  145:void Graph::printGraph()
+        -:  146:{
+       21:  147:    for (int v = 0; v < V; v++)
+        -:  148:    {
+       18:  149:        cout << "Vertex " << v << " -> ";
+       51:  150:        for (auto i = adj[v].begin(); i != adj[v].end(); ++i)
+       33:  151:            cout << *i << " ";
+       18:  152:        cout << endl;
+        -:  153:    }
+        3:  154:}
+        -:  155:
+        -:  156:// Static method to generate a random graph with specified parameters
+        3:  157:Graph Graph::generateRandomGraph(int numVertices, int numEdges, unsigned int seed)
+        -:  158:{
+        -:  159:    // Initialize random seed
+        3:  160:    srand(seed);
+        -:  161:
+        -:  162:    // Create an empty graph
+        3:  163:    Graph g(numVertices);
+        -:  164:
+        -:  165:    // Add random edges up to the specified count
+        3:  166:    int edgesAdded = 0;
+        -:  167:
+        -:  168:    // We'll try to add edges until we reach the desired number
+        -:  169:    // or we've tried too many times (to avoid infinite loops)
+        3:  170:    int attempts = 0;
+        3:  171:    const int MAX_ATTEMPTS = numVertices * numVertices * 10;
+        -:  172:
+       57:  173:    while (edgesAdded < numEdges && attempts < MAX_ATTEMPTS)
+        -:  174:    {
+        -:  175:        // Generate random source and destination vertices
+       54:  176:        int src = rand() % numVertices;
+       54:  177:        int dest = rand() % numVertices;
+        -:  178:
+        -:  179:        // Avoid self-loops for this implementation
+       54:  180:        if (src != dest)
+        -:  181:        {
+        -:  182:            // Check if this edge already exists
+       45:  183:            bool edgeExists = false;
+       76:  184:            for (auto i = g.adj[src].begin(); i != g.adj[src].end(); ++i)
+        -:  185:            {
+       43:  186:                if (*i == dest)
+        -:  187:                {
+       12:  188:                    edgeExists = true;
+       12:  189:                    break;
+        -:  190:                }
+        -:  191:            }
+        -:  192:
+        -:  193:            // If edge doesn't exist, add it
+       45:  194:            if (!edgeExists)
+        -:  195:            {
+       33:  196:                g.addEdge(src, dest);
+       33:  197:                edgesAdded++;
+        -:  198:            }
+        -:  199:        }
+        -:  200:
+       54:  201:        attempts++;
+        -:  202:    }
+        -:  203:
+        3:  204:    if (edgesAdded < numEdges)
+        -:  205:    {
+    #####:  206:        cout << "Warning: Could only add " << edgesAdded << " edges out of " << numEdges << " requested." << endl;
+        -:  207:    }
+        -:  208:
+        3:  209:    return g;
+    =====:  210:}
+        -:  211:
+        -:  212:// Function to display usage information
+    #####:  213:void printUsage(const char* programName)
+        -:  214:{
+    #####:  215:    cout << "Usage: " << programName << " [options]" << endl;
+    #####:  216:    cout << "Options:" << endl;
+    #####:  217:    cout << "  -v <num>  Number of vertices (default: 5)" << endl;
+    #####:  218:    cout << "  -e <num>  Number of edges (default: 10)" << endl;
+    #####:  219:    cout << "  -s <num>  Random seed (default: current time)" << endl;
+    #####:  220:    cout << "  -h        Display this help message" << endl;
+    #####:  221:}
+        -:  222:
+        -:  223:// Main function
+        3:  224:int main(int argc, char* argv[])
+        -:  225:{
+        -:  226:    // Default parameter values
+        3:  227:    int numVertices = 5;
+        3:  228:    int numEdges = 10;
+        3:  229:    unsigned int seed = time(NULL);  // Default to current time
+        -:  230:
+        -:  231:    // Process command-line arguments
+        -:  232:    int opt;
+       12:  233:    while ((opt = getopt(argc, argv, "v:e:s:h")) != -1)
+        -:  234:    {
+        9:  235:        switch (opt)
+        -:  236:        {
+        3:  237:            case 'v':  // Number of vertices
+        3:  238:                numVertices = atoi(optarg);
+        3:  239:                if (numVertices <= 0)
+        -:  240:                {
+    #####:  241:                    cerr << "Number of vertices must be positive." << endl;
+    #####:  242:                    return 1;
+        -:  243:                }
+        3:  244:                break;
+        -:  245:
+        3:  246:            case 'e':  // Number of edges
+        3:  247:                numEdges = atoi(optarg);
+        3:  248:                if (numEdges < 0)
+        -:  249:                {
+    #####:  250:                    cerr << "Number of edges must be non-negative." << endl;
+    #####:  251:                    return 1;
+        -:  252:                }
+        3:  253:                break;
+        -:  254:
+        3:  255:            case 's':  // Random seed
+        3:  256:                seed = atoi(optarg);
+        3:  257:                break;
+        -:  258:
+    #####:  259:            case 'h':  // Help
+    #####:  260:                printUsage(argv[0]);
+    #####:  261:                return 0;
+        -:  262:
+    #####:  263:            default:  // Unknown option
+    #####:  264:                printUsage(argv[0]);
+    #####:  265:                return 1;
+        -:  266:        }
+        -:  267:    }
+        -:  268:
+        -:  269:    // Print the parameters being used
+        3:  270:    cout << "Generating random graph with:" << endl;
+        3:  271:    cout << "  Vertices: " << numVertices << endl;
+        3:  272:    cout << "  Edges: " << numEdges << endl;
+        3:  273:    cout << "  Seed: " << seed << endl;
+        -:  274:
+        -:  275:    // Generate a random graph with the specified parameters
+        3:  276:    Graph g = Graph::generateRandomGraph(numVertices, numEdges, seed);
+        -:  277:
+        -:  278:    // Print the generated graph
+        3:  279:    cout << "\nGenerated Graph:" << endl;
+        3:  280:    g.printGraph();
+        -:  281:
+        -:  282:    // Check if the graph has an Eulerian cycle
+        3:  283:    if (g.isEulerianCycle())
+    #####:  284:        cout << "\nThe generated graph has an Eulerian cycle!" << endl;
+        -:  285:    else
+        3:  286:        cout << "\nThe generated graph does NOT have an Eulerian cycle." << endl;
+        -:  287:
+        3:  288:    return 0;
+        -:  289:}

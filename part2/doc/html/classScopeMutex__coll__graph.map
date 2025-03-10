@@ -1,0 +1,3 @@
+<map id="ScopeMutex" name="ScopeMutex">
+<area shape="rect" id="Node000001" title="A RAII class for automatic locking and unlocking of pthread mutexes." alt="" coords="5,5,120,131"/>
+</map>
