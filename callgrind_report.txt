@@ -1,0 +1,1404 @@
+--------------------------------------------------------------------------------
+Profile data file 'callgrind.out.47399' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 355376
+Trigger: Program termination
+Profiled target:  ./q4.4mem -v 10 -e 15 -s 838 (PID 47399, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                 
+--------------------------------------------------------------------------------
+1,969,579 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                file:function
+--------------------------------------------------------------------------------
+492,906 (25.03%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+488,346 (24.79%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+183,909 ( 9.34%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+145,955 ( 7.41%)  ./elf/./elf/dl-reloc.c:_dl_relocate_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+111,751 ( 5.67%)  ./elf/./elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+110,886 ( 5.63%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+109,926 ( 5.58%)  ./elf/./elf/do-rel.h:_dl_relocate_object
+ 66,136 ( 3.36%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 32,297 ( 1.64%)  ./elf/./elf/dl-tunables.c:__GI___tunables_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 15,524 ( 0.79%)  ./elf/./elf/dl-version.c:_dl_check_map_versions [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 12,192 ( 0.62%)  ???:std::locale::_Impl::_M_install_facet(std::locale::id const*, std::locale::facet const*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+ 10,373 ( 0.53%)  ./elf/../sysdeps/generic/ldsodefs.h:_dl_relocate_object
+  9,405 ( 0.48%)  ./elf/../sysdeps/generic/ldsodefs.h:do_lookup_x
+  9,216 ( 0.47%)  ./wcsmbs/./wcsmbs/btowc.c:btowc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  7,627 ( 0.39%)  ./elf/./elf/dl-runtime.c:_dl_fixup [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  7,524 ( 0.38%)  ./elf/../sysdeps/generic/dl-protected.h:do_lookup_x
+  6,212 ( 0.32%)  ./stdlib/./stdlib/random_r.c:srandom_r [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  4,860 ( 0.25%)  ./libio/./libio/fileops.c:_IO_file_xsputn@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  4,633 ( 0.24%)  ./libio/./libio/fileops.c:_IO_file_overflow@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  3,932 ( 0.20%)  ./libio/./libio/iofwrite.c:fwrite [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  3,856 ( 0.20%)  ./elf/./elf/dl-load.c:_dl_map_object_from_fd [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  3,208 ( 0.16%)  ./elf/./elf/dl-misc.c:_dl_name_match_p [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  3,200 ( 0.16%)  ./wcsmbs/./wcsmbs/wctob.c:wctob [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  3,157 ( 0.16%)  ./elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  3,139 ( 0.16%)  ./elf/./elf/dl-cache.c:_dl_cache_libcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  3,096 ( 0.16%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:intel_check_word.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  2,878 ( 0.15%)  ./malloc/./malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  2,749 ( 0.14%)  ./elf/./elf/dl-tunables.h:__GI___tunables_init
+  2,736 ( 0.14%)  ???:std::ctype<wchar_t>::_M_initialize_ctype() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  2,505 ( 0.13%)  ???:std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  2,378 ( 0.12%)  ./elf/./elf/dl-deps.c:_dl_map_object_deps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  2,367 ( 0.12%)  ./elf/./elf/dl-load.c:_dl_map_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  2,337 ( 0.12%)  ???:std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  2,297 ( 0.12%)  ???:std::ostream::sentry::sentry(std::ostream&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  2,268 ( 0.12%)  ./elf/../bits/stdlib-bsearch.h:intel_check_word.constprop.0
+  1,809 ( 0.09%)  ./elf/./elf/get-dynamic-info.h:_dl_map_object_from_fd
+  1,580 ( 0.08%)  ???:std::ostream& std::ostream::_M_insert<long>(long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,566 ( 0.08%)  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S:__strlen_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,551 ( 0.08%)  ./libio/./libio/genops.c:_IO_default_xsputn [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,369 ( 0.07%)  isEulerian.cpp:Graph::generateRandomGraph(int, int, unsigned int) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+  1,339 ( 0.07%)  ./elf/./elf/dl-minimal-malloc.c:__minimal_malloc [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  1,292 ( 0.07%)  /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::end() [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+  1,260 ( 0.06%)  ./elf/./elf/rtld.c:dl_main [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  1,230 ( 0.06%)  ./elf/./elf/dl-cache.c:_dl_load_cache_lookup [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  1,201 ( 0.06%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__mempcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,119 ( 0.06%)  ./stdlib/./stdlib/random_r.c:random_r [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,116 ( 0.06%)  ./elf/./elf/dl-object.c:_dl_new_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  1,116 ( 0.06%)  ???:std::locale::id::_M_id() const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,115 ( 0.06%)  isEulerian.cpp:Graph::printGraph() [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+  1,095 ( 0.06%)  ./string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,084 ( 0.06%)  ./malloc/./malloc/malloc.c:_int_free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,067 ( 0.05%)  /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::_List_iterator(std::__detail::_List_node_base*) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+  1,066 ( 0.05%)  ./wctype/./wctype/wctype_l.c:wctype_l [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,035 ( 0.05%)  ./libio/./libio/libioP.h:fwrite
+    977 ( 0.05%)  ./libio/./libio/fileops.c:_IO_do_write@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    920 ( 0.05%)  ./stdlib/./stdlib/random.c:random [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    908 ( 0.05%)  ./elf/./elf/dl-tunables.c:__tunable_get_val [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    871 ( 0.04%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/memset-vec-unaligned-erms.S:memset [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    856 ( 0.04%)  ./malloc/./malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    824 ( 0.04%)  ./stdlib/./stdlib/getenv.c:getenv [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    820 ( 0.04%)  ???:std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    814 ( 0.04%)  ./stdlib/./stdlib/cxa_finalize.c:__cxa_finalize [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    812 ( 0.04%)  ???:0x0000000000146900 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    808 ( 0.04%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strlen-sse2.S:strlen [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    792 ( 0.04%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strchr-sse2.S:index [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    789 ( 0.04%)  ???:std::ostream::flush() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    780 ( 0.04%)  ./libio/./libio/iofflush.c:fflush [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    771 ( 0.04%)  ./malloc/./malloc/malloc.c:ptmalloc_init.part.0
+    768 ( 0.04%)  ./iconv/./iconv/gconv_simple.c:__gconv_btwoc_ascii [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    754 ( 0.04%)  ???:std::ctype<char>::_M_widen_init() const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    750 ( 0.04%)  /usr/include/c++/13/bits/stl_list.h:std::_List_node<int>* std::__cxx11::list<int, std::allocator<int> >::_M_create_node<int const&>(int const&) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    722 ( 0.04%)  ./elf/./elf/dl-load.c:open_path [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    704 ( 0.04%)  ???:std::ostream::put(char) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    695 ( 0.04%)  ./elf/./dl-map-segments.h:_dl_map_object_from_fd
+    689 ( 0.03%)  /usr/include/c++/13/bits/stl_list.h:std::operator!=(std::_List_iterator<int> const&, std::_List_iterator<int> const&) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    684 ( 0.03%)  ./libio/./libio/fileops.c:_IO_file_write@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    673 ( 0.03%)  ???:std::locale::_Impl::_Impl(unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    640 ( 0.03%)  ./elf/./elf/libc-dl-profstub.c:_dl_mcount_wrapper_check [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    628 ( 0.03%)  ./elf/./elf/dl-load.c:open_verify.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    627 ( 0.03%)  /usr/include/c++/13/bits/stl_list.h:std::_List_node<int>::_M_valptr() [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    616 ( 0.03%)  ???:0x0000000000142070 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    601 ( 0.03%)  ./misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    593 ( 0.03%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    580 ( 0.03%)  /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::begin() [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    570 ( 0.03%)  /usr/include/c++/13/ext/aligned_buffer.h:__gnu_cxx::__aligned_membuf<int>::_M_ptr() [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    567 ( 0.03%)  ./libio/./libio/fileops.c:_IO_file_sync@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    565 ( 0.03%)  /usr/include/c++/13/bits/list.tcc:std::__cxx11::_List_base<int, std::allocator<int> >::_M_clear() [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    548 ( 0.03%)  ./elf/./elf/dl-sort-maps.c:dfs_traversal.part.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    546 ( 0.03%)  ./elf/./elf/dl-catch.c:_dl_catch_exception [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    544 ( 0.03%)  ./elf/./elf/dl-hwcaps_split.c:_dl_hwcaps_split_masked [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    534 ( 0.03%)  ./elf/../sysdeps/nptl/dl-tls_init_tp.c:rtld_mutex_dummy [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    517 ( 0.03%)  ???:0x0000000004908b80 [???]
+    516 ( 0.03%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:handle_intel.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    512 ( 0.03%)  ./wcsmbs/./wcsmbsload.h:btowc
+    490 ( 0.02%)  ./elf/./elf/dl-init.c:call_init.part.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    484 ( 0.02%)  ???:std::locale::locale() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    481 ( 0.02%)  ./posix/./posix/getopt.c:_getopt_internal_r [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    480 ( 0.02%)  ???:std::ios_base::ios_base() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    480 ( 0.02%)  isEulerian.cpp:Graph::addEdge(int, int) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    476 ( 0.02%)  ./malloc/./malloc/malloc.c:free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    468 ( 0.02%)  ./stdlib/./stdlib/cxa_atexit.c:__cxa_atexit [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    441 ( 0.02%)  ./elf/./dl-find_object.h:_dl_find_object_from_map [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    440 ( 0.02%)  ./stdlib/./stdlib/cxa_atexit.c:__new_exitfn [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    420 ( 0.02%)  /usr/include/c++/13/bits/move.h:int const& std::forward<int const&>(std::remove_reference<int const&>::type&) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    420 ( 0.02%)  /usr/include/c++/13/bits/stl_list.h:void std::__cxx11::list<int, std::allocator<int> >::_M_insert<int const&>(std::_List_iterator<int>, int const&) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    417 ( 0.02%)  ???:std::__cxx11::numpunct<char>::_M_initialize_numpunct(__locale_struct*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    417 ( 0.02%)  ???:std::numpunct<char>::_M_initialize_numpunct(__locale_struct*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    414 ( 0.02%)  ???:__gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::xsputn(char const*, long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    405 ( 0.02%)  /usr/include/c++/13/bits/new_allocator.h:std::__new_allocator<std::_List_node<int> >::allocate(unsigned long, void const*) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    399 ( 0.02%)  /usr/include/c++/13/ext/aligned_buffer.h:__gnu_cxx::__aligned_membuf<int>::_M_addr() [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    391 ( 0.02%)  ./libio/./libio/libioP.h:_IO_default_xsputn
+    390 ( 0.02%)  ./libio/./libio/libioP.h:fflush
+    386 ( 0.02%)  ./elf/./get-dynamic-info.h:dl_main
+    380 ( 0.02%)  ./elf/./elf/dl-environ.c:_dl_next_ld_env_entry [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    380 ( 0.02%)  ./stdlib/../stdlib/strtol_l.c:____strtol_l_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    375 ( 0.02%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    374 ( 0.02%)  ./elf/./elf/dl-sort-maps.c:_dl_sort_maps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    368 ( 0.02%)  ./libio/./libio/putc.c:putc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    364 ( 0.02%)  ???:__cpu_indicator_init [/usr/lib/x86_64-linux-gnu/libgcc_s.so.1]
+    353 ( 0.02%)  ???:std::__cxx11::numpunct<wchar_t>::_M_initialize_numpunct(__locale_struct*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    353 ( 0.02%)  ???:std::numpunct<wchar_t>::_M_initialize_numpunct(__locale_struct*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    344 ( 0.02%)  ./string/../sysdeps/x86_64/multiarch/strcmp-avx2.S:__strncmp_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    342 ( 0.02%)  ???:std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    340 ( 0.02%)  ./elf/../elf/dl-tls.c:_dl_allocate_tls_storage [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    334 ( 0.02%)  ./setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    318 ( 0.02%)  ./elf/./elf/dl-load.c:_dl_init_paths [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    306 ( 0.02%)  ./elf/./elf/dl-load.c:_dl_process_pt_gnu_property [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    301 ( 0.02%)  ./elf/./elf/dl-object.c:_dl_add_to_namespace_list [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    298 ( 0.02%)  ???:0x00000000000ed260 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    297 ( 0.02%)  ./elf/./elf/dl-fini.c:_dl_fini [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    297 ( 0.02%)  /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::operator*() const [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    297 ( 0.02%)  ???:std::ostream::operator<<(int) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    288 ( 0.01%)  /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::operator++() [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    285 ( 0.01%)  /usr/include/c++/13/bits/new_allocator.h:std::__new_allocator<std::_List_node<int> >::deallocate(std::_List_node<int>*, unsigned long) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    282 ( 0.01%)  ./elf/./elf/dl-find_object.c:_dlfo_process_initial [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    280 ( 0.01%)  ./elf/./elf/dl-tunables.c:__GI___tunable_set_val [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    276 ( 0.01%)  ./elf/./elf/dl-load.c:_dl_dst_count [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    274 ( 0.01%)  ./elf/./elf/dl-lookup-direct.c:_dl_lookup_direct [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    272 ( 0.01%)  ???:operator new(unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    272 ( 0.01%)  ???:std::ios_base::Init::Init() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    270 ( 0.01%)  /usr/include/c++/13/bits/allocated_ptr.h:std::__allocated_ptr<std::allocator<std::_List_node<int> > >::__allocated_ptr(std::allocator<std::_List_node<int> >&, std::_List_node<int>*) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    270 ( 0.01%)  /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::push_back(int const&) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    268 ( 0.01%)  ./elf/./get-dynamic-info.h:_dl_start
+    264 ( 0.01%)  ./elf/./elf/dl-deps.c:openaux [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    262 ( 0.01%)  ./elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_sysdep_parse_arguments [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    261 ( 0.01%)  ???:0x0000000004907040 [???]
+    258 ( 0.01%)  ./io/../sysdeps/unix/sysv/linux/open64_nocancel.c:__open_nocancel [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    254 ( 0.01%)  ./string/../string/strcspn.c:strcspn [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    248 ( 0.01%)  ./elf/./elf/dl-find_object.c:_dlfo_sort_mappings [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    248 ( 0.01%)  ./elf/./elf/dl-minimal.c:strsep [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    247 ( 0.01%)  ./elf/./elf/rtld.c:_dl_start [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    246 ( 0.01%)  ./elf/./elf/dl-call_fini.c:_dl_call_fini [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    244 ( 0.01%)  ./stdlib/./stdlib/exit.c:__run_exit_handlers [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    243 ( 0.01%)  isEulerian.cpp:Graph::isSC() [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    240 ( 0.01%)  ./stdlib/./stdlib/rand.c:rand [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    233 ( 0.01%)  ???:0x0000000004906800 [???]
+    231 ( 0.01%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:init_cpu_features.constprop.0
+    231 ( 0.01%)  isEulerian.cpp:Graph::Graph(int) [/home/imry/Desktop/Imry/os_au/OS-ex4/q4.4mem]
+    224 ( 0.01%)  ???:std::ios_base::_M_init() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    223 ( 0.01%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:get_common_cache_info.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    222 ( 0.01%)  ./elf/./elf/dl-hwcaps.c:_dl_important_hwcaps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    213 ( 0.01%)  ???:0x0000000004909360 [???]
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/new_allocator.h
+--------------------------------------------------------------------------------
+Ir           
+
+-- line 80 ----------------------------------------
+  .           #if __cplusplus >= 201103L
+  .                 // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  .                 // 2103. propagate_on_container_move_assignment
+  .                 typedef std::true_type propagate_on_container_move_assignment;
+  .           #endif
+  .           
+  .                 __attribute__((__always_inline__))
+  .                 _GLIBCXX20_CONSTEXPR
+ 10 ( 0.00%)        __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+  .           
+  .                 __attribute__((__always_inline__))
+  .                 _GLIBCXX20_CONSTEXPR
+  .                 __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+  .           
+  .                 template<typename _Tp1>
+  .           	__attribute__((__always_inline__))
+  .           	_GLIBCXX20_CONSTEXPR
+  .           	__new_allocator(const __new_allocator<_Tp1>&) _GLIBCXX_USE_NOEXCEPT { }
+  .           
+  .           #if __cplusplus >= 201103L
+  .                 __new_allocator& operator=(const __new_allocator&) = default;
+  .           #endif
+  .           
+  .           #if __cplusplus <= 201703L
+ 70 ( 0.00%)        ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+  .           
+  .                 pointer
+  .                 address(reference __x) const _GLIBCXX_NOEXCEPT
+  .                 { return std::__addressof(__x); }
+  .           
+  .                 const_pointer
+  .                 address(const_reference __x) const _GLIBCXX_NOEXCEPT
+  .                 { return std::__addressof(__x); }
+-- line 112 ----------------------------------------
+-- line 118 ----------------------------------------
+  .           #else
+  .           # define _GLIBCXX_OPERATOR_NEW ::operator new
+  .           # define _GLIBCXX_OPERATOR_DELETE ::operator delete
+  .           #endif
+  .           
+  .                 // NB: __n is permitted to be 0.  The C++ standard says nothing
+  .                 // about what the return value is when __n == 0.
+  .                 _GLIBCXX_NODISCARD _Tp*
+135 ( 0.01%)        allocate(size_type __n, const void* = static_cast<const void*>(0))
+  .                 {
+  .           #if __cplusplus >= 201103L
+  .           	// _GLIBCXX_RESOLVE_LIB_DEFECTS
+  .           	// 3308. std::allocator<void>().allocate(n)
+  .           	static_assert(sizeof(_Tp) != 0, "cannot allocate incomplete types");
+  .           #endif
+  .           
+105 ( 0.01%)  	if (__builtin_expect(__n > this->_M_max_size(), false))
+  .           	  {
+  .           	    // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  .           	    // 3190. allocator::allocate sometimes returns too little storage
+  .           	    if (__n > (std::size_t(-1) / sizeof(_Tp)))
+  .           	      std::__throw_bad_array_new_length();
+  .           	    std::__throw_bad_alloc();
+  .           	  }
+  .           
+-- line 142 ----------------------------------------
+-- line 143 ----------------------------------------
+  .           #if __cpp_aligned_new
+  .           	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+  .           	  {
+  .           	    std::align_val_t __al = std::align_val_t(alignof(_Tp));
+  .           	    return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp),
+  .           							   __al));
+  .           	  }
+  .           #endif
+120 ( 0.01%)  	return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+3,150 ( 0.16%)  => ???:0x0000000000109210 (15x)
+ 30 ( 0.00%)        }
+  .           
+  .                 // __p is not permitted to be a null pointer.
+  .                 void
+105 ( 0.01%)        deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
+  .                 {
+  .           #if __cpp_sized_deallocation
+  .           # define _GLIBCXX_SIZED_DEALLOC(p, n) (p), (n) * sizeof(_Tp)
+  .           #else
+  .           # define _GLIBCXX_SIZED_DEALLOC(p, n) (p)
+  .           #endif
+  .           
+  .           #if __cpp_aligned_new
+  .           	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+  .           	  {
+  .           	    _GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n),
+  .           				     std::align_val_t(alignof(_Tp)));
+  .           	    return;
+  .           	  }
+  .           #endif
+150 ( 0.01%)  	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+3,025 ( 0.15%)  => ???:0x0000000000109220 (15x)
+ 30 ( 0.00%)        }
+  .           
+  .           #undef _GLIBCXX_SIZED_DEALLOC
+  .           #undef _GLIBCXX_OPERATOR_DELETE
+  .           #undef _GLIBCXX_OPERATOR_NEW
+  .           
+  .           #if __cplusplus <= 201703L
+  .                 __attribute__((__always_inline__))
+  .                 size_type
+-- line 181 ----------------------------------------
+-- line 183 ----------------------------------------
+  .                 { return _M_max_size(); }
+  .           
+  .           #if __cplusplus >= 201103L
+  .                 template<typename _Up, typename... _Args>
+  .           	__attribute__((__always_inline__))
+  .           	void
+  .           	construct(_Up* __p, _Args&&... __args)
+  .           	noexcept(std::is_nothrow_constructible<_Up, _Args...>::value)
+165 ( 0.01%)  	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+120 ( 0.01%)  => /usr/include/c++/13/new:operator new(unsigned long, void*) (15x)
+105 ( 0.01%)  => /usr/include/c++/13/bits/move.h:int const& std::forward<int const&>(std::remove_reference<int const&>::type&) (15x)
+  .           
+  .                 template<typename _Up>
+  .           	__attribute__((__always_inline__))
+  .           	void
+  .           	destroy(_Up* __p)
+  .           	noexcept(std::is_nothrow_destructible<_Up>::value)
+ 15 ( 0.00%)  	{ __p->~_Up(); }
+  .           #else
+  .                 // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  .                 // 402. wrong new expression in [some_] allocator::construct
+  .                 __attribute__((__always_inline__))
+  .                 void
+  .                 construct(pointer __p, const _Tp& __val)
+  .                 { ::new((void *)__p) _Tp(__val); }
+  .           
+-- line 206 ----------------------------------------
+-- line 225 ----------------------------------------
+  .           #endif
+  .           
+  .               private:
+  .                 __attribute__((__always_inline__))
+  .                 _GLIBCXX_CONSTEXPR size_type
+  .                 _M_max_size() const _GLIBCXX_USE_NOEXCEPT
+  .                 {
+  .           #if __PTRDIFF_MAX__ < __SIZE_MAX__
+ 15 ( 0.00%)  	return std::size_t(__PTRDIFF_MAX__) / sizeof(_Tp);
+  .           #else
+  .           	return std::size_t(-1) / sizeof(_Tp);
+  .           #endif
+  .                 }
+  .               };
+  .           
+  .           _GLIBCXX_END_NAMESPACE_VERSION
+  .           } // namespace
+-- line 241 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/stl_list.h
+--------------------------------------------------------------------------------
+Ir           
+
+-- line 102 ----------------------------------------
+  .           
+  .               /// The %list node header.
+  .               struct _List_node_header : public _List_node_base
+  .               {
+  .           #if _GLIBCXX_USE_CXX11_ABI
+  .                 std::size_t _M_size;
+  .           #endif
+  .           
+ 50 ( 0.00%)        _List_node_header() _GLIBCXX_NOEXCEPT
+ 60 ( 0.00%)        { _M_init(); }
+160 ( 0.01%)  => /usr/include/c++/13/bits/stl_list.h:std::__detail::_List_node_header::_M_init() (10x)
+  .           
+  .           #if __cplusplus >= 201103L
+  .                 _List_node_header(_List_node_header&& __x) noexcept
+  .                 : _List_node_base{ __x._M_next, __x._M_prev }
+  .           # if _GLIBCXX_USE_CXX11_ABI
+  .                 , _M_size(__x._M_size)
+  .           # endif
+  .                 {
+-- line 119 ----------------------------------------
+-- line 142 ----------------------------------------
+  .           	    _M_size = __x._M_size;
+  .           # endif
+  .           	    __x._M_init();
+  .           	  }
+  .                 }
+  .           #endif
+  .           
+  .                 void
+ 40 ( 0.00%)        _M_init() _GLIBCXX_NOEXCEPT
+  .                 {
+ 70 ( 0.00%)  	this->_M_next = this->_M_prev = this;
+  .           #if _GLIBCXX_USE_CXX11_ABI
+ 20 ( 0.00%)  	this->_M_size = 0;
+  .           #endif
+ 30 ( 0.00%)        }
+  .           
+  .               private:
+  .                 _List_node_base* _M_base() { return this; }
+  .               };
+  .           
+  .               // Used by list::sort to hold nodes being sorted.
+  .               struct _Scratch_list : _List_node_base
+  .               {
+-- line 164 ----------------------------------------
+-- line 230 ----------------------------------------
+  .           _GLIBCXX_BEGIN_NAMESPACE_CONTAINER
+  .           
+  .             /// An actual node in the %list.
+  .             template<typename _Tp>
+  .               struct _List_node : public __detail::_List_node_base
+  .               {
+  .           #if __cplusplus >= 201103L
+  .                 __gnu_cxx::__aligned_membuf<_Tp> _M_storage;
+627 ( 0.03%)        _Tp*       _M_valptr()       { return _M_storage._M_ptr(); }
+969 ( 0.05%)  => /usr/include/c++/13/ext/aligned_buffer.h:__gnu_cxx::__aligned_membuf<int>::_M_ptr() (57x)
+  .                 _Tp const* _M_valptr() const { return _M_storage._M_ptr(); }
+  .           #else
+  .                 _Tp _M_data;
+  .                 _Tp*       _M_valptr()       { return std::__addressof(_M_data); }
+  .                 _Tp const* _M_valptr() const { return std::__addressof(_M_data); }
+  .           #endif
+  .               };
+  .           
+-- line 246 ----------------------------------------
+-- line 256 ----------------------------------------
+  .                 typedef _List_node<_Tp>			_Node;
+  .           
+  .                 typedef ptrdiff_t				difference_type;
+  .                 typedef std::bidirectional_iterator_tag	iterator_category;
+  .                 typedef _Tp				value_type;
+  .                 typedef _Tp*				pointer;
+  .                 typedef _Tp&				reference;
+  .           
+  8 ( 0.00%)        _List_iterator() _GLIBCXX_NOEXCEPT
+ 10 ( 0.00%)        : _M_node() { }
+  .           
+  .                 explicit
+485 ( 0.02%)        _List_iterator(__detail::_List_node_base* __x) _GLIBCXX_NOEXCEPT
+582 ( 0.03%)        : _M_node(__x) { }
+  .           
+  .                 _Self
+  .                 _M_const_cast() const _GLIBCXX_NOEXCEPT
+  .                 { return *this; }
+  .           
+  .                 // Must downcast from _List_node_base to _List_node to get to value.
+  .                 _GLIBCXX_NODISCARD
+  .                 reference
+135 ( 0.01%)        operator*() const _GLIBCXX_NOEXCEPT
+162 ( 0.01%)        { return *static_cast<_Node*>(_M_node)->_M_valptr(); }
+756 ( 0.04%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_node<int>::_M_valptr() (27x)
+  .           
+  .                 _GLIBCXX_NODISCARD
+  .                 pointer
+  .                 operator->() const _GLIBCXX_NOEXCEPT
+  .                 { return static_cast<_Node*>(_M_node)->_M_valptr(); }
+  .           
+  .                 _Self&
+ 96 ( 0.00%)        operator++() _GLIBCXX_NOEXCEPT
+  .                 {
+120 ( 0.01%)  	_M_node = _M_node->_M_next;
+ 24 ( 0.00%)  	return *this;
+ 48 ( 0.00%)        }
+  .           
+  .                 _Self
+  .                 operator++(int) _GLIBCXX_NOEXCEPT
+  .                 {
+  .           	_Self __tmp = *this;
+  .           	_M_node = _M_node->_M_next;
+  .           	return __tmp;
+  .                 }
+-- line 299 ----------------------------------------
+-- line 316 ----------------------------------------
+  .                 _GLIBCXX_NODISCARD
+  .                 friend bool
+  .                 operator==(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+  .                 { return __x._M_node == __y._M_node; }
+  .           
+  .           #if __cpp_impl_three_way_comparison < 201907L
+  .                 _GLIBCXX_NODISCARD
+  .                 friend bool
+265 ( 0.01%)        operator!=(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+424 ( 0.02%)        { return __x._M_node != __y._M_node; }
+  .           #endif
+  .           
+  .                 // The only member points to the %list element.
+  .                 __detail::_List_node_base* _M_node;
+  .               };
+  .           
+  .             /**
+  .              *  @brief A list::const_iterator.
+-- line 333 ----------------------------------------
+-- line 442 ----------------------------------------
+  .           	  {
+  .           	    __first = __first->_M_next;
+  .           	    ++__n;
+  .           	  }
+  .           	return __n;
+  .                 }
+  .           #endif
+  .           
+100 ( 0.01%)        struct _List_impl
+  .                 : public _Node_alloc_type
+  .                 {
+  .           	__detail::_List_node_header _M_node;
+  .           
+ 90 ( 0.00%)  	_List_impl() _GLIBCXX_NOEXCEPT_IF(
+  .           	    is_nothrow_default_constructible<_Node_alloc_type>::value)
+ 30 ( 0.00%)  	: _Node_alloc_type()
+270 ( 0.01%)  => /usr/include/c++/13/bits/stl_list.h:std::__detail::_List_node_header::_List_node_header() (10x)
+ 30 ( 0.00%)  	{ }
+  .           
+  .           	_List_impl(const _Node_alloc_type& __a) _GLIBCXX_NOEXCEPT
+  .           	: _Node_alloc_type(__a)
+  .           	{ }
+  .           
+  .           #if __cplusplus >= 201103L
+  .           	_List_impl(_List_impl&&) = default;
+  .           
+-- line 466 ----------------------------------------
+-- line 472 ----------------------------------------
+  .           	: _Node_alloc_type(std::move(__a))
+  .           	{ }
+  .           #endif
+  .                 };
+  .           
+  .                 _List_impl _M_impl;
+  .           
+  .           #if _GLIBCXX_USE_CXX11_ABI
+ 24 ( 0.00%)        size_t _M_get_size() const { return _M_impl._M_node._M_size; }
+  .           
+  .                 void _M_set_size(size_t __n) { _M_impl._M_node._M_size = __n; }
+  .           
+210 ( 0.01%)        void _M_inc_size(size_t __n) { _M_impl._M_node._M_size += __n; }
+  .           
+  .                 void _M_dec_size(size_t __n) { _M_impl._M_node._M_size -= __n; }
+  .           
+  .           # if !_GLIBCXX_INLINE_VERSION
+  .                 size_t
+  .                 _M_distance(const __detail::_List_node_base* __first,
+  .           		  const __detail::_List_node_base* __last) const
+  .                 { return _S_distance(__first, __last); }
+-- line 492 ----------------------------------------
+-- line 509 ----------------------------------------
+  .                 {
+  .           	return _S_distance(_M_impl._M_node._M_next,
+  .           			   std::__addressof(_M_impl._M_node));
+  .                 }
+  .           # endif
+  .           #endif
+  .           
+  .                 typename _Node_alloc_traits::pointer
+ 75 ( 0.00%)        _M_get_node()
+ 75 ( 0.00%)        { return _Node_alloc_traits::allocate(_M_impl, 1); }
+  .           
+  .                 void
+ 90 ( 0.00%)        _M_put_node(typename _Node_alloc_traits::pointer __p) _GLIBCXX_NOEXCEPT
+120 ( 0.01%)        { _Node_alloc_traits::deallocate(_M_impl, __p, 1); }
+  .           
+  .             public:
+  .                 typedef _Alloc allocator_type;
+  .           
+  .                 _Node_alloc_type&
+120 ( 0.01%)        _M_get_Node_allocator() _GLIBCXX_NOEXCEPT
+ 90 ( 0.00%)        { return _M_impl; }
+  .           
+  .                 const _Node_alloc_type&
+  .                 _M_get_Node_allocator() const _GLIBCXX_NOEXCEPT
+  .                 { return _M_impl; }
+  .           
+  .           #if __cplusplus >= 201103L
+110 ( 0.01%)        _List_base() = default;
+440 ( 0.02%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::_List_impl::_List_impl() (10x)
+  .           #else
+  .                 _List_base() { }
+  .           #endif
+  .           
+  .                 _List_base(const _Node_alloc_type& __a) _GLIBCXX_NOEXCEPT
+  .                 : _M_impl(__a)
+  .                 { }
+  .           
+-- line 544 ----------------------------------------
+-- line 566 ----------------------------------------
+  .                 { }
+  .           
+  .                 void
+  .                 _M_move_nodes(_List_base&& __x)
+  .                 { _M_impl._M_node._M_move_nodes(std::move(__x._M_impl._M_node)); }
+  .           #endif
+  .           
+  .                 // This is what actually destroys the list.
+ 50 ( 0.00%)        ~_List_base() _GLIBCXX_NOEXCEPT
+ 90 ( 0.00%)        { _M_clear(); }
+4,745 ( 0.24%)  => /usr/include/c++/13/bits/list.tcc:std::__cxx11::_List_base<int, std::allocator<int> >::_M_clear() (10x)
+210 ( 0.01%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::_List_impl::~_List_impl() (10x)
+  .           
+  .                 void
+  .                 _M_clear() _GLIBCXX_NOEXCEPT;
+  .           
+  .                 void
+  .                 _M_init() _GLIBCXX_NOEXCEPT
+  .                 { this->_M_impl._M_node._M_init(); }
+  .               };
+-- line 583 ----------------------------------------
+-- line 700 ----------------------------------------
+  .           	    _M_put_node(__p);
+  .           	    __throw_exception_again;
+  .           	  }
+  .           	return __p;
+  .                 }
+  .           #else
+  .                 template<typename... _Args>
+  .           	_Node*
+150 ( 0.01%)  	_M_create_node(_Args&&... __args)
+  .           	{
+ 60 ( 0.00%)  	  auto __p = this->_M_get_node();
+3,810 ( 0.19%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::_M_get_node() (15x)
+ 60 ( 0.00%)  	  auto& __alloc = _M_get_Node_allocator();
+105 ( 0.01%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::_M_get_Node_allocator() (15x)
+ 90 ( 0.00%)  	  __allocated_ptr<_Node_alloc_type> __guard{__alloc, __p};
+375 ( 0.02%)  => /usr/include/c++/13/bits/allocated_ptr.h:std::__allocated_ptr<std::allocator<std::_List_node<int> > >::__allocated_ptr(std::allocator<std::_List_node<int> >&, std::_List_node<int>*) (15x)
+165 ( 0.01%)  	  _Node_alloc_traits::construct(__alloc, __p->_M_valptr(),
+420 ( 0.02%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_node<int>::_M_valptr() (15x)
+105 ( 0.01%)  => /usr/include/c++/13/bits/move.h:int const& std::forward<int const&>(std::remove_reference<int const&>::type&) (15x)
+  .           					std::forward<_Args>(__args)...);
+ 60 ( 0.00%)  	  __guard = nullptr;
+150 ( 0.01%)  => /usr/include/c++/13/bits/allocated_ptr.h:std::__allocated_ptr<std::allocator<std::_List_node<int> > >::operator=(decltype(nullptr)) (15x)
+ 30 ( 0.00%)  	  return __p;
+135 ( 0.01%)  	}
+180 ( 0.01%)  => /usr/include/c++/13/bits/allocated_ptr.h:std::__allocated_ptr<std::allocator<std::_List_node<int> > >::~__allocated_ptr() (15x)
+  .           #endif
+  .           
+  .           #if _GLIBCXX_USE_CXX11_ABI
+  .                 static size_t
+  .                 _S_distance(const_iterator __first, const_iterator __last)
+  .                 { return std::distance(__first, __last); }
+  .           
+  .                 // return the stored size
+  .                 size_t
+ 15 ( 0.00%)        _M_node_count() const
+ 15 ( 0.00%)        { return this->_M_get_size(); }
+ 24 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::_M_get_size() const (3x)
+  .           #else
+  .                 // dummy implementations used when the size is not stored
+  .                 static size_t
+  .                 _S_distance(const_iterator, const_iterator)
+  .                 { return 0; }
+  .           
+  .                 // count the number of nodes
+  .                 size_t
+-- line 736 ----------------------------------------
+-- line 741 ----------------------------------------
+  .               public:
+  .                 // [23.2.2.1] construct/copy/destroy
+  .                 // (assign() and get_allocator() are also listed in this section)
+  .           
+  .                 /**
+  .                  *  @brief  Creates a %list with no elements.
+  .                  */
+  .           #if __cplusplus >= 201103L
+110 ( 0.01%)        list() = default;
+550 ( 0.03%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::_List_base() (10x)
+  .           #else
+  .                 list() { }
+  .           #endif
+  .           
+  .                 /**
+  .                  *  @brief  Creates a %list with no elements.
+  .                  *  @param  __a  An allocator object.
+  .                  */
+-- line 757 ----------------------------------------
+-- line 895 ----------------------------------------
+  .           #if __cplusplus >= 201103L
+  .                 /**
+  .                  *  No explicit dtor needed as the _Base dtor takes care of
+  .                  *  things.  The _Base dtor only erases the elements, and note
+  .                  *  that if the elements themselves are pointers, the pointed-to
+  .                  *  memory is not touched in any way.  Managing the pointer is
+  .                  *  the user's responsibility.
+  .                  */
+110 ( 0.01%)        ~list() = default;
+5,095 ( 0.26%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::~_List_base() (10x)
+  .           #endif
+  .           
+  .                 /**
+  .                  *  @brief  %List assignment operator.
+  .                  *  @param  __x  A %list of identical element and allocator types.
+  .                  *
+  .                  *  All the elements of @a __x are copied.
+  .                  *
+-- line 911 ----------------------------------------
+-- line 1014 ----------------------------------------
+  .           
+  .                 // iterators
+  .                 /**
+  .                  *  Returns a read/write iterator that points to the first element in the
+  .                  *  %list.  Iteration is done in ordinary element order.
+  .                  */
+  .                 _GLIBCXX_NODISCARD
+  .                 iterator
+232 ( 0.01%)        begin() _GLIBCXX_NOEXCEPT
+348 ( 0.02%)        { return iterator(this->_M_impl._M_node._M_next); }
+319 ( 0.02%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::_List_iterator(std::__detail::_List_node_base*) (29x)
+  .           
+  .                 /**
+  .                  *  Returns a read-only (constant) iterator that points to the
+  .                  *  first element in the %list.  Iteration is done in ordinary
+  .                  *  element order.
+  .                  */
+  .                 _GLIBCXX_NODISCARD
+  .                 const_iterator
+-- line 1031 ----------------------------------------
+-- line 1034 ----------------------------------------
+  .           
+  .                 /**
+  .                  *  Returns a read/write iterator that points one past the last
+  .                  *  element in the %list.  Iteration is done in ordinary element
+  .                  *  order.
+  .                  */
+  .                 _GLIBCXX_NODISCARD
+  .                 iterator
+544 ( 0.03%)        end() _GLIBCXX_NOEXCEPT
+748 ( 0.04%)        { return iterator(&this->_M_impl._M_node); }
+748 ( 0.04%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::_List_iterator(std::__detail::_List_node_base*) (68x)
+  .           
+  .                 /**
+  .                  *  Returns a read-only (constant) iterator that points one past
+  .                  *  the last element in the %list.  Iteration is done in ordinary
+  .                  *  element order.
+  .                  */
+  .                 _GLIBCXX_NODISCARD
+  .                 const_iterator
+-- line 1051 ----------------------------------------
+-- line 1141 ----------------------------------------
+  .                  */
+  .                 _GLIBCXX_NODISCARD bool
+  .                 empty() const _GLIBCXX_NOEXCEPT
+  .                 { return this->_M_impl._M_node._M_next == &this->_M_impl._M_node; }
+  .           
+  .                 /**  Returns the number of elements in the %list.  */
+  .                 _GLIBCXX_NODISCARD
+  .                 size_type
+ 15 ( 0.00%)        size() const _GLIBCXX_NOEXCEPT
+ 15 ( 0.00%)        { return _M_node_count(); }
+ 54 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::_M_node_count() const (3x)
+  .           
+  .                 /**  Returns the size() of the largest possible %list.  */
+  .                 _GLIBCXX_NODISCARD
+  .                 size_type
+  .                 max_size() const _GLIBCXX_NOEXCEPT
+  .                 { return _Node_alloc_traits::max_size(_M_get_Node_allocator()); }
+  .           
+  .           #if __cplusplus >= 201103L
+-- line 1158 ----------------------------------------
+-- line 1297 ----------------------------------------
+  .                  *
+  .                  *  This is a typical stack operation.  The function creates an
+  .                  *  element at the end of the %list and assigns the given data to
+  .                  *  it.  Due to the nature of a %list this operation can be done
+  .                  *  in constant time, and does not invalidate iterators and
+  .                  *  references.
+  .                  */
+  .                 void
+ 90 ( 0.00%)        push_back(const value_type& __x)
+180 ( 0.01%)        { this->_M_insert(end(), __x); }
+7,425 ( 0.38%)  => /usr/include/c++/13/bits/stl_list.h:void std::__cxx11::list<int, std::allocator<int> >::_M_insert<int const&>(std::_List_iterator<int>, int const&) (15x)
+450 ( 0.02%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::end() (15x)
+  .           
+  .           #if __cplusplus >= 201103L
+  .                 void
+  .                 push_back(value_type&& __x)
+  .                 { this->_M_insert(end(), std::move(__x)); }
+  .           
+  .                 template<typename... _Args>
+  .           #if __cplusplus > 201402L
+-- line 1314 ----------------------------------------
+-- line 1995 ----------------------------------------
+  .                 {
+  .           	_Node* __tmp = _M_create_node(__x);
+  .           	__tmp->_M_hook(__position._M_node);
+  .           	this->_M_inc_size(1);
+  .                 }
+  .           #else
+  .                template<typename... _Args>
+  .                  void
+105 ( 0.01%)         _M_insert(iterator __position, _Args&&... __args)
+  .                  {
+135 ( 0.01%)  	 _Node* __tmp = _M_create_node(std::forward<_Args>(__args)...);
+6,525 ( 0.33%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_node<int>* std::__cxx11::list<int, std::allocator<int> >::_M_create_node<int const&>(int const&) (15x)
+105 ( 0.01%)  => /usr/include/c++/13/bits/move.h:int const& std::forward<int const&>(std::remove_reference<int const&>::type&) (15x)
+ 75 ( 0.00%)  	 __tmp->_M_hook(__position._M_node);
+165 ( 0.01%)  => ???:0x0000000000109190 (15x)
+ 60 ( 0.00%)  	 this->_M_inc_size(1);
+210 ( 0.01%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::_M_inc_size(unsigned long) (15x)
+ 45 ( 0.00%)         }
+  .           #endif
+  .           
+  .                 // Erases element at position given.
+  .                 void
+  .                 _M_erase(iterator __position) _GLIBCXX_NOEXCEPT
+  .                 {
+  .           	this->_M_dec_size(1);
+  .           	__position._M_node->_M_unhook();
+-- line 2016 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/move.h
+--------------------------------------------------------------------------------
+Ir           
+
+-- line 43 ----------------------------------------
+  .           
+  .             // Used, in C++03 mode too, by allocators, etc.
+  .             /**
+  .              *  @brief Same as C++11 std::addressof
+  .              *  @ingroup utilities
+  .              */
+  .             template<typename _Tp>
+  .               inline _GLIBCXX_CONSTEXPR _Tp*
+ 60 ( 0.00%)      __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+ 45 ( 0.00%)      { return __builtin_addressof(__r); }
+  .           
+  .           #if __cplusplus >= 201103L
+  .           
+  .             /**
+  .              *  @addtogroup utilities
+  .              *  @{
+  .              */
+  .           
+-- line 60 ----------------------------------------
+-- line 62 ----------------------------------------
+  .              *  @brief  Forward an lvalue.
+  .              *  @return The parameter cast to the specified type.
+  .              *
+  .              *  This function is used to implement "perfect forwarding".
+  .              */
+  .             template<typename _Tp>
+  .               _GLIBCXX_NODISCARD
+  .               constexpr _Tp&&
+240 ( 0.01%)      forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+180 ( 0.01%)      { return static_cast<_Tp&&>(__t); }
+  .           
+  .             /**
+  .              *  @brief  Forward an rvalue.
+  .              *  @return The parameter cast to the specified type.
+  .              *
+  .              *  This function is used to implement "perfect forwarding".
+  .              */
+  .             template<typename _Tp>
+-- line 79 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: isEulerian.cpp
+--------------------------------------------------------------------------------
+Ir           
+
+-- line 12 ----------------------------------------
+  .           class Graph
+  .           {
+  .               int V;           // No. of vertices
+  .               list<int> *adj;  // A dynamic array of adjacency lists
+  .               int *in;         // Array to store in-degree of vertices
+  .           public:
+  .               // Constructor and destructor
+  .               Graph(int V);
+132 ( 0.01%)      ~Graph() { delete [] adj; delete [] in; }
+5,205 ( 0.26%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::~list() (10x)
+ 99 ( 0.01%)  => ???:0x00000000001092b0 (1x)
+ 95 ( 0.00%)  => ???:0x0000000000109250 (1x)
+  .           
+  .               // Function to add an edge to graph
+480 ( 0.02%)      void addEdge(int v, int w) { adj[v].push_back(w); (in[w])++; }
+8,145 ( 0.41%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::push_back(int const&) (15x)
+  .           
+  .               // Method to check if this graph is Eulerian or not
+  .               bool isEulerianCycle();
+  .           
+  .               // Method to check if all non-zero degree vertices are connected
+  .               bool isSC();
+  .           
+  .               // Function to do DFS starting from v. Used in isConnected()
+-- line 31 ----------------------------------------
+-- line 36 ----------------------------------------
+  .           
+  .               // Function to print the graph
+  .               void printGraph();
+  .           
+  .               // Static method to generate a random graph
+  .               static Graph generateRandomGraph(int numVertices, int numEdges, unsigned int seed);
+  .           };
+  .           
+  9 ( 0.00%)  Graph::Graph(int V)
+  .           {
+  3 ( 0.00%)      this->V = V;
+ 85 ( 0.00%)      adj = new list<int>[V];
+862 ( 0.04%)  => ???:0x0000000000109180 (1x)
+660 ( 0.03%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::list() (10x)
+ 11 ( 0.00%)      in = new int[V];
+214 ( 0.01%)  => ???:0x0000000000109180 (1x)
+ 45 ( 0.00%)      for (int i = 0; i < V; i++)
+ 70 ( 0.00%)          in[i] = 0;
+  8 ( 0.00%)  }
+  .           
+  .           /* This function returns true if the directed graph has a eulerian
+  .              cycle, otherwise returns false */
+  .           bool Graph::isEulerianCycle()
+  5 ( 0.00%)  {
+  .               // Check if all non-zero degree vertices are connected
+  8 ( 0.00%)      if (isSC() == false)
+911 ( 0.05%)  => isEulerian.cpp:Graph::isSC() (1x)
+  2 ( 0.00%)          return false;
+  .           
+  .               // Check if in-degree and out-degree of every vertex is same
+  .               for (int i = 0; i < V; i++)
+  .                   if (adj[i].size() != in[i])
+  .                       return false;
+  .           
+  .               return true;
+  2 ( 0.00%)  }
+  .           
+  .           // A recursive function to do DFS starting from v
+  .           void Graph::DFSUtil(int v, bool visited[])
+ 22 ( 0.00%)  {
+  .               // Mark the current node as visited
+ 10 ( 0.00%)      visited[v] = true;
+  .           
+  .               // Recur for all the vertices adjacent to this vertex
+  6 ( 0.00%)      list<int>::iterator i;
+  9 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::_List_iterator() (1x)
+108 ( 0.01%)      for (i = adj[v].begin(); i != adj[v].end(); ++i)
+ 60 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::end() (2x)
+ 31 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::begin() (1x)
+ 26 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::operator!=(std::_List_iterator<int> const&, std::_List_iterator<int> const&) (2x)
+ 12 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::operator++() (1x)
+ 22 ( 0.00%)          if (!visited[*i])
+ 39 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::operator*() const (1x)
+  9 ( 0.00%)              DFSUtil(*i, visited);
+268 ( 0.01%)  => isEulerian.cpp:Graph::DFSUtil(int, bool*)'2 (1x)
+ 39 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::operator*() const (1x)
+ 14 ( 0.00%)  }
+  .           
+  .           // Function that returns reverse (or transpose) of this graph
+  .           Graph Graph::getTranspose()
+  .           {
+  .               Graph g(V);
+  .               for (int v = 0; v < V; v++)
+  .               {
+  .                   // Recur for all the vertices adjacent to this vertex
+-- line 88 ----------------------------------------
+-- line 94 ----------------------------------------
+  .                   }
+  .               }
+  .               return g;
+  .           }
+  .           
+  .           // This function returns true if all non-zero degree vertices of
+  .           // graph are strongly connected
+  .           bool Graph::isSC()
+ 10 ( 0.00%)  {
+  .               // Mark all the vertices as not visited (For first DFS)
+ 33 ( 0.00%)      bool visited[V];
+ 56 ( 0.00%)      for (int i = 0; i < V; i++)
+ 40 ( 0.00%)          visited[i] = false;
+  .           
+  .               // Find the first vertex with non-zero degree
+  .               int n;
+  6 ( 0.00%)      for (n = 0; n < V; n++)
+ 15 ( 0.00%)          if (adj[n].size() > 0)
+ 28 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::size() const (1x)
+  1 ( 0.00%)              break;
+  .           
+  .               // If there are no edges, return true trivially
+  4 ( 0.00%)      if (n == V)
+  .                   return true;
+  .           
+  .               // Do DFS traversal starting from first non-zero degree vertex
+  6 ( 0.00%)      DFSUtil(n, visited);
+584 ( 0.03%)  => isEulerian.cpp:Graph::DFSUtil(int, bool*) (1x)
+  .           
+  .               // If DFS traversal doesn't visit all vertices with non-zero degree, then return false
+ 11 ( 0.00%)      for (int i = 0; i < V; i++)
+ 47 ( 0.00%)          if (adj[i].size() > 0 && visited[i] == false)
+ 56 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::size() const (2x)
+  2 ( 0.00%)              return false;
+  .           
+  .               // Create a reversed graph
+  .               Graph gr = getTranspose();
+  .           
+  .               // Mark all the vertices as not visited (For second DFS)
+  .               for (int i = 0; i < V; i++)
+  .                   visited[i] = false;
+  .           
+-- line 132 ----------------------------------------
+-- line 134 ----------------------------------------
+  .               gr.DFSUtil(n, visited);
+  .           
+  .               // If all vertices are not visited in second DFS, then return false
+  .               for (int i = 0; i < V; i++)
+  .                   if (adj[i].size() > 0 && visited[i] == false)
+  .                       return false;
+  .           
+  .               return true;
+ 12 ( 0.00%)  }
+  .           
+  .           // Function to print the graph
+  .           void Graph::printGraph()
+  8 ( 0.00%)  {
+ 56 ( 0.00%)      for (int v = 0; v < V; v++)
+  .               {
+150 ( 0.01%)          cout << "Vertex " << v << " -> ";
+4,073 ( 0.21%)  => ???:0x0000000000109290 (10x)
+5,970 ( 0.30%)  => ???:0x0000000000109200 (20x)
+650 ( 0.03%)          for (auto i = adj[v].begin(); i != adj[v].end(); ++i)
+750 ( 0.04%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::end() (25x)
+325 ( 0.02%)  => /usr/include/c++/13/bits/stl_list.h:std::operator!=(std::_List_iterator<int> const&, std::_List_iterator<int> const&) (25x)
+310 ( 0.02%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::begin() (10x)
+180 ( 0.01%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::operator++() (15x)
+195 ( 0.01%)              cout << *i << " ";
+6,123 ( 0.31%)  => ???:0x0000000000109290 (15x)
+4,155 ( 0.21%)  => ???:0x0000000000109200 (15x)
+585 ( 0.03%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::operator*() const (15x)
+ 50 ( 0.00%)          cout << endl;
+4,340 ( 0.22%)  => ???:0x0000000000109230 (10x)
+  .               }
+  6 ( 0.00%)  }
+  .           
+  .           // Static method to generate a random graph with specified parameters
+  .           Graph Graph::generateRandomGraph(int numVertices, int numEdges, unsigned int seed)
+ 12 ( 0.00%)  {
+  .               // Initialize random seed
+  3 ( 0.00%)      srand(seed);
+6,234 ( 0.32%)  => ???:0x00000000001091f0 (1x)
+  .           
+  .               // Create an empty graph
+  5 ( 0.00%)      Graph g(numVertices);
+1,967 ( 0.10%)  => isEulerian.cpp:Graph::Graph(int) (1x)
+  .           
+  .               // Add random edges up to the specified count
+  1 ( 0.00%)      int edgesAdded = 0;
+  .           
+  .               // We'll try to add edges until we reach the desired number
+  .               // or we've tried too many times (to avoid infinite loops)
+  1 ( 0.00%)      int attempts = 0;
+  8 ( 0.00%)      const int MAX_ATTEMPTS = numVertices * numVertices * 10;
+  .           
+124 ( 0.01%)      while (edgesAdded < numEdges && attempts < MAX_ATTEMPTS)
+  .               {
+  .                   // Generate random source and destination vertices
+ 80 ( 0.00%)          int src = rand() % numVertices;
+1,182 ( 0.06%)  => ???:0x00000000001091b0 (20x)
+ 80 ( 0.00%)          int dest = rand() % numVertices;
+1,177 ( 0.06%)  => ???:0x00000000001091b0 (20x)
+  .           
+  .                   // Avoid self-loops for this implementation
+ 60 ( 0.00%)          if (src != dest)
+  .                   {
+  .                       // Check if this edge already exists
+ 17 ( 0.00%)              bool edgeExists = false;
+698 ( 0.04%)              for (auto i = g.adj[src].begin(); i != g.adj[src].end(); ++i)
+720 ( 0.04%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::end() (24x)
+527 ( 0.03%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::list<int, std::allocator<int> >::begin() (17x)
+312 ( 0.02%)  => /usr/include/c++/13/bits/stl_list.h:std::operator!=(std::_List_iterator<int> const&, std::_List_iterator<int> const&) (24x)
+ 84 ( 0.00%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::operator++() (7x)
+  .                       {
+ 72 ( 0.00%)                  if (*i == dest)
+351 ( 0.02%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_iterator<int>::operator*() const (9x)
+  .                           {
+  2 ( 0.00%)                      edgeExists = true;
+  2 ( 0.00%)                      break;
+  .                           }
+  .                       }
+  .           
+  .                       // If edge doesn't exist, add it
+ 68 ( 0.00%)              if (!edgeExists)
+  .                       {
+ 90 ( 0.00%)                  g.addEdge(src, dest);
+8,625 ( 0.44%)  => isEulerian.cpp:Graph::addEdge(int, int) (15x)
+ 15 ( 0.00%)                  edgesAdded++;
+  .                       }
+  .                   }
+  .           
+ 20 ( 0.00%)          attempts++;
+  .               }
+  .           
+  3 ( 0.00%)      if (edgesAdded < numEdges)
+  .               {
+  .                   cout << "Warning: Could only add " << edgesAdded << " edges out of " << numEdges << " requested." << endl;
+  .               }
+  .           
+  1 ( 0.00%)      return g;
+  7 ( 0.00%)  }
+  .           
+  .           // Function to display usage information
+  .           void printUsage(const char* programName)
+  .           {
+  .               cout << "Usage: " << programName << " [options]" << endl;
+  .               cout << "Options:" << endl;
+  .               cout << "  -v <num>  Number of vertices (default: 5)" << endl;
+  .               cout << "  -e <num>  Number of edges (default: 10)" << endl;
+  .               cout << "  -s <num>  Random seed (default: current time)" << endl;
+  .               cout << "  -h        Display this help message" << endl;
+  .           }
+  .           
+  .           // Main function
+  .           int main(int argc, char* argv[])
+ 10 ( 0.00%)  {
+  .               // Default parameter values
+  1 ( 0.00%)      int numVertices = 5;
+  1 ( 0.00%)      int numEdges = 10;
+  3 ( 0.00%)      unsigned int seed = time(NULL);  // Default to current time
+  8 ( 0.00%)  => ???:0x00000000001091e0 (1x)
+  .           
+  .               // Process command-line arguments
+  .               int opt;
+ 45 ( 0.00%)      while ((opt = getopt(argc, argv, "v:e:s:h")) != -1)
+1,165 ( 0.06%)  => ???:0x00000000001091a0 (4x)
+  .               {
+ 18 ( 0.00%)          switch (opt)
+  .                   {
+  .                       case 'v':  // Number of vertices
+  4 ( 0.00%)                  numVertices = atoi(optarg);
+136 ( 0.01%)  => ???:0x0000000000109280 (1x)
+  2 ( 0.00%)                  if (numVertices <= 0)
+  .                           {
+  .                               cerr << "Number of vertices must be positive." << endl;
+  .                               return 1;
+  .                           }
+  2 ( 0.00%)                  break;
+  .           
+  .                       case 'e':  // Number of edges
+  4 ( 0.00%)                  numEdges = atoi(optarg);
+136 ( 0.01%)  => ???:0x0000000000109280 (1x)
+  2 ( 0.00%)                  if (numEdges < 0)
+  .                           {
+  .                               cerr << "Number of edges must be non-negative." << endl;
+  .                               return 1;
+  .                           }
+  1 ( 0.00%)                  break;
+  .           
+  .                       case 's':  // Random seed
+  4 ( 0.00%)                  seed = atoi(optarg);
+156 ( 0.01%)  => ???:0x0000000000109280 (1x)
+  1 ( 0.00%)                  break;
+  .           
+  .                       case 'h':  // Help
+  .                           printUsage(argv[0]);
+  .                           return 0;
+  .           
+  .                       default:  // Unknown option
+  .                           printUsage(argv[0]);
+  .                           return 1;
+  .                   }
+  .               }
+  .           
+  .               // Print the parameters being used
+  9 ( 0.00%)      cout << "Generating random graph with:" << endl;
+5,681 ( 0.29%)  => ???:0x0000000000109200 (1x)
+5,631 ( 0.29%)  => ???:0x0000000000109230 (1x)
+ 14 ( 0.00%)      cout << "  Vertices: " << numVertices << endl;
+329 ( 0.02%)  => ???:0x0000000000109200 (1x)
+434 ( 0.02%)  => ???:0x0000000000109230 (1x)
+2,350 ( 0.12%)  => ???:0x0000000000109290 (1x)
+ 14 ( 0.00%)      cout << "  Edges: " << numEdges << endl;
+314 ( 0.02%)  => ???:0x0000000000109200 (1x)
+434 ( 0.02%)  => ???:0x0000000000109230 (1x)
+428 ( 0.02%)  => ???:0x0000000000109290 (1x)
+ 14 ( 0.00%)      cout << "  Seed: " << seed << endl;
+309 ( 0.02%)  => ???:0x0000000000109200 (1x)
+434 ( 0.02%)  => ???:0x0000000000109230 (1x)
+2,373 ( 0.12%)  => ???:0x0000000000109260 (1x)
+  .           
+  .               // Generate a random graph with the specified parameters
+  9 ( 0.00%)      Graph g = Graph::generateRandomGraph(numVertices, numEdges, seed);
+22,548 ( 1.14%)  => isEulerian.cpp:Graph::generateRandomGraph(int, int, unsigned int) (1x)
+5,531 ( 0.28%)  => isEulerian.cpp:Graph::~Graph() (1x)
+  .           
+  .               // Print the generated graph
+  9 ( 0.00%)      cout << "\nGenerated Graph:" << endl;
+1,483 ( 0.08%)  => ???:0x0000000000109200 (1x)
+434 ( 0.02%)  => ???:0x0000000000109230 (1x)
+  3 ( 0.00%)      g.printGraph();
+27,926 ( 1.42%)  => isEulerian.cpp:Graph::printGraph() (1x)
+  .           
+  .               // Check if the graph has an Eulerian cycle
+  5 ( 0.00%)      if (g.isEulerianCycle())
+928 ( 0.05%)  => isEulerian.cpp:Graph::isEulerianCycle() (1x)
+  .                   cout << "\nThe generated graph has an Eulerian cycle!" << endl;
+  .               else
+  9 ( 0.00%)          cout << "\nThe generated graph does NOT have an Eulerian cycle." << endl;
+3,763 ( 0.19%)  => ???:0x0000000000109200 (1x)
+434 ( 0.02%)  => ???:0x0000000000109230 (1x)
+  .           
+  1 ( 0.00%)      return 0;
+  7 ( 0.00%)  }
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/list.tcc
+--------------------------------------------------------------------------------
+Ir           
+
+-- line 58 ----------------------------------------
+  .           
+  .           namespace std _GLIBCXX_VISIBILITY(default)
+  .           {
+  .           _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  .           _GLIBCXX_BEGIN_NAMESPACE_CONTAINER
+  .           
+  .             template<typename _Tp, typename _Alloc>
+  .               void
+ 50 ( 0.00%)      _List_base<_Tp, _Alloc>::
+  .               _M_clear() _GLIBCXX_NOEXCEPT
+  .               {
+  .                 typedef _List_node<_Tp>  _Node;
+ 30 ( 0.00%)        __detail::_List_node_base* __cur = _M_impl._M_node._M_next;
+ 85 ( 0.00%)        while (__cur != &_M_impl._M_node)
+  .           	{
+ 30 ( 0.00%)  	  _Node* __tmp = static_cast<_Node*>(__cur);
+ 45 ( 0.00%)  	  __cur = __tmp->_M_next;
+ 60 ( 0.00%)  	  _Tp* __val = __tmp->_M_valptr();
+420 ( 0.02%)  => /usr/include/c++/13/bits/stl_list.h:std::_List_node<int>::_M_valptr() (15x)
+  .           #if __cplusplus >= 201103L
+150 ( 0.01%)  	  _Node_alloc_traits::destroy(_M_get_Node_allocator(), __val);
+105 ( 0.01%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::_M_get_Node_allocator() (15x)
+  .           #else
+  .           	  _Tp_alloc_type(_M_get_Node_allocator()).destroy(__val);
+  .           #endif
+ 75 ( 0.00%)  	  _M_put_node(__tmp);
+3,625 ( 0.18%)  => /usr/include/c++/13/bits/stl_list.h:std::__cxx11::_List_base<int, std::allocator<int> >::_M_put_node(std::_List_node<int>*) (15x)
+  .           	}
+ 40 ( 0.00%)      }
+  .           
+  .           #if __cplusplus >= 201103L
+  .             template<typename _Tp, typename _Alloc>
+  .               template<typename... _Args>
+  .                 typename list<_Tp, _Alloc>::iterator
+  .                 list<_Tp, _Alloc>::
+  .                 emplace(const_iterator __position, _Args&&... __args)
+  .                 {
+-- line 91 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/allocated_ptr.h
+--------------------------------------------------------------------------------
+Ir           
+
+-- line 45 ----------------------------------------
+  .             /// Non-standard RAII type for managing pointers obtained from allocators.
+  .             template<typename _Alloc>
+  .               struct __allocated_ptr
+  .               {
+  .                 using pointer = typename allocator_traits<_Alloc>::pointer;
+  .                 using value_type = typename allocator_traits<_Alloc>::value_type;
+  .           
+  .                 /// Take ownership of __ptr
+105 ( 0.01%)        __allocated_ptr(_Alloc& __a, pointer __ptr) noexcept
+120 ( 0.01%)        : _M_alloc(std::__addressof(__a)), _M_ptr(__ptr)
+105 ( 0.01%)  => /usr/include/c++/13/bits/move.h:std::allocator<std::_List_node<int> >* std::__addressof<std::allocator<std::_List_node<int> > >(std::allocator<std::_List_node<int> >&) (15x)
+ 45 ( 0.00%)        { }
+  .           
+  .                 /// Convert __ptr to allocator's pointer type and take ownership of it
+  .                 template<typename _Ptr,
+  .           	       typename _Req = _Require<is_same<_Ptr, value_type*>>>
+  .                 __allocated_ptr(_Alloc& __a, _Ptr __ptr)
+  .                 : _M_alloc(std::__addressof(__a)),
+  .           	_M_ptr(pointer_traits<pointer>::pointer_to(*__ptr))
+  .                 { }
+  .           
+  .                 /// Transfer ownership of the owned pointer
+  .                 __allocated_ptr(__allocated_ptr&& __gd) noexcept
+  .                 : _M_alloc(__gd._M_alloc), _M_ptr(__gd._M_ptr)
+  .                 { __gd._M_ptr = nullptr; }
+  .           
+  .                 /// Deallocate the owned pointer
+ 75 ( 0.00%)        ~__allocated_ptr()
+  .                 {
+ 60 ( 0.00%)  	if (_M_ptr != nullptr)
+  .           	  std::allocator_traits<_Alloc>::deallocate(*_M_alloc, _M_ptr, 1);
+ 45 ( 0.00%)        }
+  .           
+  .                 /// Release ownership of the owned pointer
+  .                 __allocated_ptr&
+ 75 ( 0.00%)        operator=(std::nullptr_t) noexcept
+  .                 {
+ 30 ( 0.00%)  	_M_ptr = nullptr;
+ 15 ( 0.00%)  	return *this;
+ 30 ( 0.00%)        }
+  .           
+  .                 /// Get the address that the owned pointer refers to.
+  .                 value_type* get() { return std::__to_address(_M_ptr); }
+  .           
+  .               private:
+  .                 _Alloc* _M_alloc;
+  .                 pointer _M_ptr;
+  .               };
+-- line 91 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/ext/aligned_buffer.h
+--------------------------------------------------------------------------------
+Ir           
+
+-- line 56 ----------------------------------------
+  .                 alignas(__alignof__(_Tp2::_M_t)) unsigned char _M_storage[sizeof(_Tp)];
+  .           
+  .                 __aligned_membuf() = default;
+  .           
+  .                 // Can be used to avoid value-initialization zeroing _M_storage.
+  .                 __aligned_membuf(std::nullptr_t) { }
+  .           
+  .                 void*
+228 ( 0.01%)        _M_addr() noexcept
+171 ( 0.01%)        { return static_cast<void*>(&_M_storage); }
+  .           
+  .                 const void*
+  .                 _M_addr() const noexcept
+  .                 { return static_cast<const void*>(&_M_storage); }
+  .           
+  .                 _Tp*
+285 ( 0.01%)        _M_ptr() noexcept
+285 ( 0.01%)        { return static_cast<_Tp*>(_M_addr()); }
+399 ( 0.02%)  => /usr/include/c++/13/ext/aligned_buffer.h:__gnu_cxx::__aligned_membuf<int>::_M_addr() (57x)
+  .           
+  .                 const _Tp*
+  .                 _M_ptr() const noexcept
+  .                 { return static_cast<const _Tp*>(_M_addr()); }
+  .               };
+  .           
+  .           #if _GLIBCXX_INLINE_VERSION
+  .             template<typename _Tp>
+-- line 81 ----------------------------------------
+
+--------------------------------------------------------------------------------
+The following files chosen for auto-annotation could not be found:
+--------------------------------------------------------------------------------
+  ./elf/../bits/stdlib-bsearch.h
+  ./elf/../elf/dl-tls.c
+  ./elf/../sysdeps/generic/dl-new-hash.h
+  ./elf/../sysdeps/generic/dl-protected.h
+  ./elf/../sysdeps/generic/ldsodefs.h
+  ./elf/../sysdeps/nptl/dl-tls_init_tp.c
+  ./elf/../sysdeps/unix/sysv/linux/dl-sysdep.c
+  ./elf/../sysdeps/x86/dl-cacheinfo.h
+  ./elf/../sysdeps/x86_64/dl-machine.h
+  ./elf/../sysdeps/x86_64/dl-trampoline.h
+  ./elf/./dl-find_object.h
+  ./elf/./dl-map-segments.h
+  ./elf/./elf/dl-cache.c
+  ./elf/./elf/dl-call_fini.c
+  ./elf/./elf/dl-catch.c
+  ./elf/./elf/dl-deps.c
+  ./elf/./elf/dl-environ.c
+  ./elf/./elf/dl-find_object.c
+  ./elf/./elf/dl-fini.c
+  ./elf/./elf/dl-hwcaps.c
+  ./elf/./elf/dl-hwcaps_split.c
+  ./elf/./elf/dl-init.c
+  ./elf/./elf/dl-load.c
+  ./elf/./elf/dl-lookup-direct.c
+  ./elf/./elf/dl-lookup.c
+  ./elf/./elf/dl-minimal-malloc.c
+  ./elf/./elf/dl-minimal.c
+  ./elf/./elf/dl-misc.c
+  ./elf/./elf/dl-object.c
+  ./elf/./elf/dl-reloc.c
+  ./elf/./elf/dl-runtime.c
+  ./elf/./elf/dl-sort-maps.c
+  ./elf/./elf/dl-tunables.c
+  ./elf/./elf/dl-tunables.h
+  ./elf/./elf/dl-version.c
+  ./elf/./elf/do-rel.h
+  ./elf/./elf/get-dynamic-info.h
+  ./elf/./elf/libc-dl-profstub.c
+  ./elf/./elf/rtld.c
+  ./elf/./get-dynamic-info.h
+  ./iconv/./iconv/gconv_simple.c
+  ./io/../sysdeps/unix/sysv/linux/open64_nocancel.c
+  ./libio/./libio/fileops.c
+  ./libio/./libio/genops.c
+  ./libio/./libio/iofflush.c
+  ./libio/./libio/iofwrite.c
+  ./libio/./libio/libioP.h
+  ./libio/./libio/putc.c
+  ./malloc/./malloc/malloc.c
+  ./misc/../sysdeps/unix/sysv/linux/mmap64.c
+  ./posix/./posix/getopt.c
+  ./setjmp/../sysdeps/x86_64/setjmp.S
+  ./stdlib/../stdlib/strtol_l.c
+  ./stdlib/./stdlib/cxa_atexit.c
+  ./stdlib/./stdlib/cxa_finalize.c
+  ./stdlib/./stdlib/exit.c
+  ./stdlib/./stdlib/getenv.c
+  ./stdlib/./stdlib/rand.c
+  ./stdlib/./stdlib/random.c
+  ./stdlib/./stdlib/random_r.c
+  ./string/../string/strcspn.c
+  ./string/../sysdeps/x86_64/multiarch/../multiarch/memset-vec-unaligned-erms.S
+  ./string/../sysdeps/x86_64/multiarch/../multiarch/strchr-sse2.S
+  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S
+  ./string/../sysdeps/x86_64/multiarch/../multiarch/strlen-sse2.S
+  ./string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S
+  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+  ./string/../sysdeps/x86_64/multiarch/strcmp-avx2.S
+  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S
+  ./wcsmbs/./wcsmbs/btowc.c
+  ./wcsmbs/./wcsmbs/wctob.c
+  ./wcsmbs/./wcsmbsload.h
+  ./wctype/./wctype/wctype_l.c
+
+--------------------------------------------------------------------------------
+Ir              
+--------------------------------------------------------------------------------
+15,731 ( 0.80%)  events annotated
+
